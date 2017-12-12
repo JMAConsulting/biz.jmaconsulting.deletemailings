@@ -23,6 +23,12 @@ This extension deletes mailings that are unscheduled after a period of days spec
     1. If Delete Draft/Unscheduled Mailings periodically is not in the list of extensions, manually download it and unzip it into the extensions direction setup above, then return to this page.
     1. Beside Delete Draft/Unscheduled Mailings periodically, click Download.
     1. Review the information, then click Download and Install.
+1. Setup Delete Unscheduled Mailings Schedule Job
+    1. Go to Administer >> System Settings >> Scheduled Jobs.
+    1. Enable Delete Unscheduled Mailings Schedule Job if not enabled.
+        1. Besides Delete Unscheduled Mailings click on more link and then Enable.
+    1. Edit the Job to update days params
+        1. By default # days is set to 30 i.e the job will delete 30 days old draft or unscheduled mailings.
 
 JMA Consulting developed and maintains this extension.
 
