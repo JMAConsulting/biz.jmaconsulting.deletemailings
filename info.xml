@@ -5,8 +5,8 @@
   <description>This extension deletes mailings that are unscheduled after a period of days specified.</description>
   <license>AGPL-3.0</license>
   <maintainer>
-    <author>Edsel</author>
-    <email>edsel.lopez@jmaconsulting.biz</email>
+    <author>JMA Consulting</author>
+    <email>support@jmaconsulting.biz</email>
   </maintainer>
   <urls>
     <url desc="Main Extension Page">https://github.com/JMAConsulting/biz.jmaconsulting.deletemailings</url>
@@ -14,13 +14,13 @@
     <url desc="Support">https://github.com/JMAConsulting/biz.jmaconsulting.deletemailings/issues</url>
     <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
   </urls>
-  <releaseDate>2017-06-29</releaseDate>
+  <releaseDate>2017-12-14</releaseDate>
   <version>1.0</version>
   <develStage>stable</develStage>
   <compatibility>
     <ver>4.7</ver>
   </compatibility>
-  <comments>This module has been developed for Yee Hong Center for Geriatric Care.</comments>
+  <comments>Many thanks to Yee Hong Center for Geriatric Care for sponsoring the development of this extension.</comments>
   <civix>
     <namespace>CRM/Deletemailings</namespace>
   </civix>
