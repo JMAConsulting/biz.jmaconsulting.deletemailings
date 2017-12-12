@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <extension key="biz.jmaconsulting.deletemailings" type="module">
+  <downloadUrl>https://github.com/JMAConsulting/biz.jmaconsulting.deletemailings/archive/deletemailings-1.0.zip</downloadUrl>
   <file>deletemailings</file>
   <name>Delete Draft/Unscheduled Mailings periodically</name>
   <description>This extension deletes mailings that are unscheduled after a period of days specified.</description>
