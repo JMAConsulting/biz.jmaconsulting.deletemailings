@@ -9,22 +9,25 @@
  */
 function _deletemailings_civix_civicrm_config(&$config = NULL) {
   static $configured = FALSE;
-  if ($configured) return;
+  if ($configured) {
+    return;
+  }
   $configured = TRUE;
 
   $template =& CRM_Core_Smarty::singleton();
 
-  $extRoot = dirname( __FILE__ ) . DIRECTORY_SEPARATOR;
+  $extRoot = dirname(__FILE__) . DIRECTORY_SEPARATOR;
   $extDir = $extRoot . 'templates';
 
-  if ( is_array( $template->template_dir ) ) {
-      array_unshift( $template->template_dir, $extDir );
-  } else {
-      $template->template_dir = array( $extDir, $template->template_dir );
+  if (is_array($template->template_dir)) {
+      array_unshift($template->template_dir, $extDir);
+  }
+  else {
+      $template->template_dir = array($extDir, $template->template_dir);
   }
 
-  $include_path = $extRoot . PATH_SEPARATOR . get_include_path( );
-  set_include_path( $include_path );
+  $include_path = $extRoot . PATH_SEPARATOR . get_include_path();
+  set_include_path($include_path);
 }
 
 /**
@@ -115,7 +118,8 @@ function _deletemailings_civix_civicrm_upgrade($op, CRM_Queue_Queue $queue = NUL
 function _deletemailings_civix_upgrader() {
   if (!file_exists(__DIR__.'/CRM/Deletemailings/Upgrader.php')) {
     return NULL;
-  } else {
+  }
+  else {
     return CRM_Deletemailings_Upgrader_Base::instance();
   }
 }
@@ -148,7 +152,8 @@ function _deletemailings_civix_find_files($dir, $pattern) {
       while (FALSE !== ($entry = readdir($dh))) {
         $path = $subdir . DIRECTORY_SEPARATOR . $entry;
         if ($entry{0} == '.') {
-        } elseif (is_dir($path)) {
+        }
+        elseif (is_dir($path)) {
           $todos[] = $path;
         }
       }
@@ -246,10 +251,11 @@ function _deletemailings_civix_insert_navigation_menu(&$menu, $path, $item, $par
         'navID'      => $navId,
       ))
     );
-    return true;
-  } else {
+    return TRUE;
+  }
+  else {
     // Find an recurse into the next level down
-    $found = false;
+    $found = FALSE;
     $path = explode('/', $path);
     $first = array_shift($path);
     foreach ($menu as $key => &$entry) {
@@ -269,7 +275,9 @@ function _deletemailings_civix_insert_navigation_menu(&$menu, $path, $item, $par
  */
 function _deletemailings_civix_civicrm_alterSettingsFolders(&$metaDataFolders = NULL) {
   static $configured = FALSE;
-  if ($configured) return;
+  if ($configured) {
+    return;
+  }
   $configured = TRUE;
 
   $settingsDir = __DIR__ . DIRECTORY_SEPARATOR . 'settings';
