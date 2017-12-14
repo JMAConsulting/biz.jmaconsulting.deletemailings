@@ -116,7 +116,7 @@ function _deletemailings_civix_civicrm_upgrade($op, CRM_Queue_Queue $queue = NUL
  * @return CRM_Deletemailings_Upgrader
  */
 function _deletemailings_civix_upgrader() {
-  if (!file_exists(__DIR__.'/CRM/Deletemailings/Upgrader.php')) {
+  if (!file_exists(__DIR__ . '/CRM/Deletemailings/Upgrader.php')) {
     return NULL;
   }
   else {
@@ -244,7 +244,7 @@ function _deletemailings_civix_insert_navigation_menu(&$menu, $path, $item, $par
     if (!$navId) {
       $navId = CRM_Core_DAO::singleValueQuery("SELECT max(id) FROM civicrm_navigation");
     }
-    $navId ++;
+    $navId++;
     $menu[$navId] = array(
       'attributes' => array_merge($item, array(
         'label' => CRM_Utils_Array::value('name', $item),
