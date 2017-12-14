@@ -43,7 +43,7 @@ function _deletemailings_civix_civicrm_xmlMenu(&$files) {
 }
 
 /**
- * Implementation of hook_civicrm_install
+ * (Delegated) Implementation of hook_civicrm_install
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_install
  */
@@ -55,7 +55,7 @@ function _deletemailings_civix_civicrm_install() {
 }
 
 /**
- * Implementation of hook_civicrm_uninstall
+ * (Delegated) Implementation of hook_civicrm_uninstall
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_uninstall
  */
