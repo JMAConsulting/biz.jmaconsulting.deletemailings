@@ -15,22 +15,21 @@ function civicrm_api3_deletemailings_cleanmailing($params) {
     $days = 30;
   }
 
-  $result = civicrm_api3('Mailing', 'get', array(
+  $result = civicrm_api3('Mailing', 'get', [
     'sequential' => 1,
-    'scheduled_id' => array('IS NULL' => 1),
-    'options' => array('limit' => 0),
-  ));
+    'scheduled_id' => ['IS NULL' => 1],
+    'options' => ['limit' => 0],
+  ]);
 
   if ($result['count'] > 0) {
     foreach ($result['values'] as $value) {
-       if(strtotime($value['created_date']) < strtotime("-{$days} days")) {
-         civicrm_api3('Mailing', 'delete', array(
-           'id' => $value['id'],
-         ));
-         $returnValues[] = $value['id'];
-       }
+      if (strtotime($value['created_date']) < strtotime("-{$days} days")) {
+        civicrm_api3('Mailing', 'delete', [
+          'id' => $value['id'],
+        ]);
+        $returnValues[] = $value['id'];
+      }
     }
   }
   return civicrm_api3_create_success($returnValues, $params, 'DeleteMailings', 'Cleanmailing');
 }
-
